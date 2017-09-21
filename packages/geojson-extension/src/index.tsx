@@ -82,7 +82,7 @@ class RenderedGeoJSON extends Widget implements IRenderMime.IRenderer {
     const metadata = model.metadata[this._mimeType] as any || {};
     return new Promise<void>((resolve, reject) => {
       this._map = leaflet.map(this.node).fitWorld();
-      this._map.scrollWheelZoom.disable();
+      // this._map.scrollWheelZoom.disable();
       leaflet.tileLayer(
         metadata.url_template || URL_TEMPLATE,
         metadata.layer_options || LAYER_OPTIONS
